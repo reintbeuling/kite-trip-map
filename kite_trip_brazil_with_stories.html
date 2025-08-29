@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_049cdb5d9f28c340a78b905759fb5d7b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_049cdb5d9f28c340a78b905759fb5d7b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_049cdb5d9f28c340a78b905759fb5d7b = L.map(
+                "map_049cdb5d9f28c340a78b905759fb5d7b",
+                {
+                    center: [-3.5, -41.5],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_2fa4f62b2a37afcf5466565bac6b4fcc = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_049cdb5d9f28c340a78b905759fb5d7b);
+        
+    
+            var marker_0ec02091faff456d8b1464b43cbad0c0 = L.marker(
+                [-2.53, -44.3],
+                {}
+            ).addTo(map_049cdb5d9f28c340a78b905759fb5d7b);
+        
+    
+        var popup_cc8186c16bc2a46036f72a3dbef28c49 = L.popup({"maxWidth": 300});
+
+        
+            var html_e22961eaa6deb0d9c3e4902c7de0734b = $(`<div id="html_e22961eaa6deb0d9c3e4902c7de0734b" style="width: 100.0%; height: 100.0%;"><b>São Luís</b><br>Colonial UNESCO city with music, culture, and history — starting point of the trip.</div>`)[0];
+            popup_cc8186c16bc2a46036f72a3dbef28c49.setContent(html_e22961eaa6deb0d9c3e4902c7de0734b);
+        
+
+        marker_0ec02091faff456d8b1464b43cbad0c0.bindPopup(popup_cc8186c16bc2a46036f72a3dbef28c49)
+        ;
+
+        
+    
+    
+            marker_0ec02091faff456d8b1464b43cbad0c0.bindTooltip(
+                `<div>
+                     São Luís
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7393644f3d5738944814c3ec73326d7f = L.marker(
+                [-2.57, -42.75],
+                {}
+            ).addTo(map_049cdb5d9f28c340a78b905759fb5d7b);
+        
+    
+        var popup_24aa40ede0328efbf87c0b6c93459d92 = L.popup({"maxWidth": 300});
+
+        
+            var html_87e4cf9eaa2f0538c44bdd0574d6ba29 = $(`<div id="html_87e4cf9eaa2f0538c44bdd0574d6ba29" style="width: 100.0%; height: 100.0%;"><b>Atins</b><br>Remote fishing village at the edge of Lençóis Maranhenses. Flat-water lagoons and dunes.</div>`)[0];
+            popup_24aa40ede0328efbf87c0b6c93459d92.setContent(html_87e4cf9eaa2f0538c44bdd0574d6ba29);
+        
+
+        marker_7393644f3d5738944814c3ec73326d7f.bindPopup(popup_24aa40ede0328efbf87c0b6c93459d92)
+        ;
+
+        
+    
+    
+            marker_7393644f3d5738944814c3ec73326d7f.bindTooltip(
+                `<div>
+                     Atins
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3c656f6d011773e91c10165d44df6cf2 = L.marker(
+                [-2.92, -41.35],
+                {}
+            ).addTo(map_049cdb5d9f28c340a78b905759fb5d7b);
+        
+    
+        var popup_0e6bbb9cbaa72149a539b493e8b8212f = L.popup({"maxWidth": 300});
+
+        
+            var html_287560b20e4245baa3dfff2b4560efb1 = $(`<div id="html_287560b20e4245baa3dfff2b4560efb1" style="width: 100.0%; height: 100.0%;"><b>Barra Grande</b><br>Chill eco-village with calm lagoons, yoga, and sunset mangroves.</div>`)[0];
+            popup_0e6bbb9cbaa72149a539b493e8b8212f.setContent(html_287560b20e4245baa3dfff2b4560efb1);
+        
+
+        marker_3c656f6d011773e91c10165d44df6cf2.bindPopup(popup_0e6bbb9cbaa72149a539b493e8b8212f)
+        ;
+
+        
+    
+    
+            marker_3c656f6d011773e91c10165d44df6cf2.bindTooltip(
+                `<div>
+                     Barra Grande
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c49358c4516162a0da871cb57ebfc04c = L.marker(
+                [-2.85, -41.3],
+                {}
+            ).addTo(map_049cdb5d9f28c340a78b905759fb5d7b);
+        
+    
+        var popup_4d8dafe6bed22c63dda771f0c7261e2c = L.popup({"maxWidth": 300});
+
+        
+            var html_2f56a16a1ae0b5726e8c936e5d1f4d2b = $(`<div id="html_2f56a16a1ae0b5726e8c936e5d1f4d2b" style="width: 100.0%; height: 100.0%;"><b>Macapá (Piauí)</b><br>Large uncrowded lagoon, steady winds — great for big air and freeride.</div>`)[0];
+            popup_4d8dafe6bed22c63dda771f0c7261e2c.setContent(html_2f56a16a1ae0b5726e8c936e5d1f4d2b);
+        
+
+        marker_c49358c4516162a0da871cb57ebfc04c.bindPopup(popup_4d8dafe6bed22c63dda771f0c7261e2c)
+        ;
+
+        
+    
+    
+            marker_c49358c4516162a0da871cb57ebfc04c.bindTooltip(
+                `<div>
+                     Macapá (Piauí)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c9fa3b53e324258c39192b35844c63d9 = L.marker(
+                [-2.9, -40.85],
+                {}
+            ).addTo(map_049cdb5d9f28c340a78b905759fb5d7b);
+        
+    
+        var popup_7353c164e95c7c8f812e172512225ba5 = L.popup({"maxWidth": 300});
+
+        
+            var html_3b6ba04e18f90386f8d245fe3c8942a7 = $(`<div id="html_3b6ba04e18f90386f8d245fe3c8942a7" style="width: 100.0%; height: 100.0%;"><b>Camocim</b><br>Gateway to Parnaíba Delta. Mangroves, rivers, authentic fishing town.</div>`)[0];
+            popup_7353c164e95c7c8f812e172512225ba5.setContent(html_3b6ba04e18f90386f8d245fe3c8942a7);
+        
+
+        marker_c9fa3b53e324258c39192b35844c63d9.bindPopup(popup_7353c164e95c7c8f812e172512225ba5)
+        ;
+
+        
+    
+    
+            marker_c9fa3b53e324258c39192b35844c63d9.bindTooltip(
+                `<div>
+                     Camocim
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1e7ea7f1adb0a7d8a38445f7d1bf98d7 = L.marker(
+                [-2.86, -40.73],
+                {}
+            ).addTo(map_049cdb5d9f28c340a78b905759fb5d7b);
+        
+    
+        var popup_ebfa8bcb6ac11dd8552158c85d1156f1 = L.popup({"maxWidth": 300});
+
+        
+            var html_9cff86eeaa8cbe8d0d0ec9e5aef5ae6c = $(`<div id="html_9cff86eeaa8cbe8d0d0ec9e5aef5ae6c" style="width: 100.0%; height: 100.0%;"><b>Tatajuba</b><br>Dune village with side-onshore winds and small waves. Rustic and adventurous.</div>`)[0];
+            popup_ebfa8bcb6ac11dd8552158c85d1156f1.setContent(html_9cff86eeaa8cbe8d0d0ec9e5aef5ae6c);
+        
+
+        marker_1e7ea7f1adb0a7d8a38445f7d1bf98d7.bindPopup(popup_ebfa8bcb6ac11dd8552158c85d1156f1)
+        ;
+
+        
+    
+    
+            marker_1e7ea7f1adb0a7d8a38445f7d1bf98d7.bindTooltip(
+                `<div>
+                     Tatajuba
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_6d57207263193ff38047149f10001f3e = L.marker(
+                [-2.8, -40.52],
+                {}
+            ).addTo(map_049cdb5d9f28c340a78b905759fb5d7b);
+        
+    
+        var popup_abf7fc1bb2e5633aaea3b92d326f38a6 = L.popup({"maxWidth": 300});
+
+        
+            var html_ac8301362976ed9fb2081c9b6277b403 = $(`<div id="html_ac8301362976ed9fb2081c9b6277b403" style="width: 100.0%; height: 100.0%;"><b>Jericoacoara</b><br>Iconic kite town with dunes, nightlife, caipirinhas. Windy and lively.</div>`)[0];
+            popup_abf7fc1bb2e5633aaea3b92d326f38a6.setContent(html_ac8301362976ed9fb2081c9b6277b403);
+        
+
+        marker_6d57207263193ff38047149f10001f3e.bindPopup(popup_abf7fc1bb2e5633aaea3b92d326f38a6)
+        ;
+
+        
+    
+    
+            marker_6d57207263193ff38047149f10001f3e.bindTooltip(
+                `<div>
+                     Jericoacoara
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0ac310d1de617bc28991119134b37739 = L.marker(
+                [-2.82, -40.45],
+                {}
+            ).addTo(map_049cdb5d9f28c340a78b905759fb5d7b);
+        
+    
+        var popup_1bef2ce865883e58e5d0276b5a9c84f5 = L.popup({"maxWidth": 300});
+
+        
+            var html_c195ee7cbf95053e821f34da5a700401 = $(`<div id="html_c195ee7cbf95053e821f34da5a700401" style="width: 100.0%; height: 100.0%;"><b>Preá</b><br>One of the windiest beaches in Brazil — strong winds and good waves.</div>`)[0];
+            popup_1bef2ce865883e58e5d0276b5a9c84f5.setContent(html_c195ee7cbf95053e821f34da5a700401);
+        
+
+        marker_0ac310d1de617bc28991119134b37739.bindPopup(popup_1bef2ce865883e58e5d0276b5a9c84f5)
+        ;
+
+        
+    
+    
+            marker_0ac310d1de617bc28991119134b37739.bindTooltip(
+                `<div>
+                     Preá
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c3099cf6ec4452e74f6d6f7f4923a305 = L.marker(
+                [-2.89, -39.92],
+                {}
+            ).addTo(map_049cdb5d9f28c340a78b905759fb5d7b);
+        
+    
+        var popup_63d197995410a305df2fc111cc3a4f7c = L.popup({"maxWidth": 300});
+
+        
+            var html_e14304117782134510a7ec4a105a14e0 = $(`<div id="html_e14304117782134510a7ec4a105a14e0" style="width: 100.0%; height: 100.0%;"><b>Icaraí de Amontada</b><br>Lagoon and reef waves. Peaceful and scenic mid-trip rest spot.</div>`)[0];
+            popup_63d197995410a305df2fc111cc3a4f7c.setContent(html_e14304117782134510a7ec4a105a14e0);
+        
+
+        marker_c3099cf6ec4452e74f6d6f7f4923a305.bindPopup(popup_63d197995410a305df2fc111cc3a4f7c)
+        ;
+
+        
+    
+    
+            marker_c3099cf6ec4452e74f6d6f7f4923a305.bindTooltip(
+                `<div>
+                     Icaraí de Amontada
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_65a52d27d5fdba9217694f56ebc81df7 = L.marker(
+                [-2.9, -39.92],
+                {}
+            ).addTo(map_049cdb5d9f28c340a78b905759fb5d7b);
+        
+    
+        var popup_01b5c0c67085e6ba77d6297e7c6e353b = L.popup({"maxWidth": 300});
+
+        
+            var html_7ed5c0db88ae91ed1481cdb6cc6ed00c = $(`<div id="html_7ed5c0db88ae91ed1481cdb6cc6ed00c" style="width: 100.0%; height: 100.0%;"><b>Ilha do Guajiru</b><br>Huge flat-water lagoon, famous for freestyle training. Kiters’ paradise.</div>`)[0];
+            popup_01b5c0c67085e6ba77d6297e7c6e353b.setContent(html_7ed5c0db88ae91ed1481cdb6cc6ed00c);
+        
+
+        marker_65a52d27d5fdba9217694f56ebc81df7.bindPopup(popup_01b5c0c67085e6ba77d6297e7c6e353b)
+        ;
+
+        
+    
+    
+            marker_65a52d27d5fdba9217694f56ebc81df7.bindTooltip(
+                `<div>
+                     Ilha do Guajiru
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ba7df6e17f03f97d0d83159aba9ffa0b = L.marker(
+                [-3.41, -39.03],
+                {}
+            ).addTo(map_049cdb5d9f28c340a78b905759fb5d7b);
+        
+    
+        var popup_0a42fbca7d9c4ba138ee69480500b1f5 = L.popup({"maxWidth": 300});
+
+        
+            var html_f9d01e141b5c05382099633766848fd9 = $(`<div id="html_f9d01e141b5c05382099633766848fd9" style="width: 100.0%; height: 100.0%;"><b>Paracuru</b><br>Flat water + reef waves. Versatile spot with popular downwind to Lagoinha.</div>`)[0];
+            popup_0a42fbca7d9c4ba138ee69480500b1f5.setContent(html_f9d01e141b5c05382099633766848fd9);
+        
+
+        marker_ba7df6e17f03f97d0d83159aba9ffa0b.bindPopup(popup_0a42fbca7d9c4ba138ee69480500b1f5)
+        ;
+
+        
+    
+    
+            marker_ba7df6e17f03f97d0d83159aba9ffa0b.bindTooltip(
+                `<div>
+                     Paracuru
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5b60eb435a5a6715db95d97f1906b93f = L.marker(
+                [-3.23, -39.03],
+                {}
+            ).addTo(map_049cdb5d9f28c340a78b905759fb5d7b);
+        
+    
+        var popup_fd51d2f66082b9529d9a5547927859e4 = L.popup({"maxWidth": 300});
+
+        
+            var html_c8ba88e8c5f15eed373e04b38ff53905 = $(`<div id="html_c8ba88e8c5f15eed373e04b38ff53905" style="width: 100.0%; height: 100.0%;"><b>Lagoinha</b><br>Lagoon and ocean waves, cliffside town, great for beginners and pros alike.</div>`)[0];
+            popup_fd51d2f66082b9529d9a5547927859e4.setContent(html_c8ba88e8c5f15eed373e04b38ff53905);
+        
+
+        marker_5b60eb435a5a6715db95d97f1906b93f.bindPopup(popup_fd51d2f66082b9529d9a5547927859e4)
+        ;
+
+        
+    
+    
+            marker_5b60eb435a5a6715db95d97f1906b93f.bindTooltip(
+                `<div>
+                     Lagoinha
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e0ae37ea576b10a04d9cd129faa2dea4 = L.marker(
+                [-3.49, -38.91],
+                {}
+            ).addTo(map_049cdb5d9f28c340a78b905759fb5d7b);
+        
+    
+        var popup_627c6e420d7982b230a7ddd4e277180c = L.popup({"maxWidth": 300});
+
+        
+            var html_07c2db452317b5cad114e6ff309ae24e = $(`<div id="html_07c2db452317b5cad114e6ff309ae24e" style="width: 100.0%; height: 100.0%;"><b>Taíba</b><br>Wave riding up to 3m plus lagoon. Known for freestyle and big air progression.</div>`)[0];
+            popup_627c6e420d7982b230a7ddd4e277180c.setContent(html_07c2db452317b5cad114e6ff309ae24e);
+        
+
+        marker_e0ae37ea576b10a04d9cd129faa2dea4.bindPopup(popup_627c6e420d7982b230a7ddd4e277180c)
+        ;
+
+        
+    
+    
+            marker_e0ae37ea576b10a04d9cd129faa2dea4.bindTooltip(
+                `<div>
+                     Taíba
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5e6229e8f4b7f76ff6558657a0ec4af4 = L.marker(
+                [-3.63, -38.72],
+                {}
+            ).addTo(map_049cdb5d9f28c340a78b905759fb5d7b);
+        
+    
+        var popup_9a88e2c60fe44b3ed225a671e47d32fd = L.popup({"maxWidth": 300});
+
+        
+            var html_b3853788aac84bbbbd0cf7173e07536d = $(`<div id="html_b3853788aac84bbbbd0cf7173e07536d" style="width: 100.0%; height: 100.0%;"><b>Cumbuco</b><br>One of the world’s kite capitals. Lagoons like Cauipe, plus ocean sessions.</div>`)[0];
+            popup_9a88e2c60fe44b3ed225a671e47d32fd.setContent(html_b3853788aac84bbbbd0cf7173e07536d);
+        
+
+        marker_5e6229e8f4b7f76ff6558657a0ec4af4.bindPopup(popup_9a88e2c60fe44b3ed225a671e47d32fd)
+        ;
+
+        
+    
+    
+            marker_5e6229e8f4b7f76ff6558657a0ec4af4.bindTooltip(
+                `<div>
+                     Cumbuco
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_61d653e79a822649e51a51ba61c9d42d = L.marker(
+                [-3.73, -38.52],
+                {}
+            ).addTo(map_049cdb5d9f28c340a78b905759fb5d7b);
+        
+    
+        var popup_cb54ef4352fa1b46374a4f4b3c0af28f = L.popup({"maxWidth": 300});
+
+        
+            var html_3d28b1b4163a1fcfaff06ee0b7c55979 = $(`<div id="html_3d28b1b4163a1fcfaff06ee0b7c55979" style="width: 100.0%; height: 100.0%;"><b>Fortaleza</b><br>Vibrant city finale. Praia do Futuro with strong winds, nightlife, and culture.</div>`)[0];
+            popup_cb54ef4352fa1b46374a4f4b3c0af28f.setContent(html_3d28b1b4163a1fcfaff06ee0b7c55979);
+        
+
+        marker_61d653e79a822649e51a51ba61c9d42d.bindPopup(popup_cb54ef4352fa1b46374a4f4b3c0af28f)
+        ;
+
+        
+    
+    
+            marker_61d653e79a822649e51a51ba61c9d42d.bindTooltip(
+                `<div>
+                     Fortaleza
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var poly_line_9e9fd3f6850f7cc13008af1deea93758 = L.polyline(
+                [[-2.53, -44.3], [-2.57, -42.75], [-2.92, -41.35], [-2.85, -41.3], [-2.9, -40.85], [-2.86, -40.73], [-2.8, -40.52], [-2.82, -40.45], [-2.89, -39.92], [-2.9, -39.92], [-3.41, -39.03], [-3.23, -39.03], [-3.49, -38.91], [-3.63, -38.72], [-3.73, -38.52]],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_049cdb5d9f28c340a78b905759fb5d7b);
+        
+</script>
+</html>
