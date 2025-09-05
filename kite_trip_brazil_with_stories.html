@@ -10,6 +10,7 @@
 
     <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
     <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <style> .leaflet-popup-content-wrapper.scrollable-popup, .leaflet-popup-content.scrollable-popup {max-height: 400px;overflow-y: auto;}</style>
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
@@ -108,6 +109,7 @@
     // Atins
     var marker_60eb3f5f8aec67eda7cabe8ea08bfe11 = L.marker([-2.574, -42.746], {}).addTo(map_c74bc511c4c1bb524d4b2167dd68b0e3);
     var popup_08c210ac825d73d99af366df58af9469 = L.popup({"maxWidth": 300});
+    var windfinderSrc = "https://www.windfinder.com/widget/forecast/macapa_amapa_brazil?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kts&unit_pressure=hPa&days=4&show_day=1&show_pressure=0&show_waves=0&show_clouds=0&show_rain=0";
     var html_bfd1b6a93303cbea9c13fbcfe71d9ed1 = $(`<div id="html_bfd1b6a93303cbea9c13fbcfe71d9ed1" style="width: 100.0%; height: 100.0%;"><b>Atins (by boat or 4x4 from Barreirinhas)</b>
         <br>
          Atins is a village surrounded by dunes. To go there, you have to take a boat or a 4×4 from Barreirinhas.
@@ -117,8 +119,25 @@
          In Atins kitesurfing is possible in front of the beach & and in the ponds of the Lençois. Please note, the best moment for kitesurfing in the Lençois is in August/September. 
          After that the ponds run down little by little. To go to the Lençois you have to book a trip with an agency by 4×4 or quad bike.
          //
-         Lencois Adventure – WhatsApp +55 (98) 99171 3998 – They organize Barreirinhas / Atins transfers at 4pm and from Atins to Barreirinhas at 9am everyday. 
-          </div>`)[0];
+         Lencois Adventure – WhatsApp +55 (98) 99171 3998 – They organize Barreirinhas / Atins transfers at 4pm and from Atins to Barreirinhas at 9am everyday.<br><br>
+
+        <!-- Windfinder widget (iframe) -->
+        <div style="margin-top:8px;">
+        <iframe 
+            title="Windfinder – Macapá forecast"
+            src="${windfinderSrc}"
+            width="500"
+            height="260"
+            frameborder="0"
+            scrolling="no"
+            style="max-width:100%;border:0;border-radius:8px;overflow:hidden;">
+        </iframe>
+        <div style="font-size:12px;opacity:.8;margin-top:4px;">
+            <a rel="nofollow" href="${windfinderSrc.replace('/widget/forecast/','/forecast/')}" target="_blank">Open op Windfinder</a>
+        </div>
+        </div>
+    </div>
+    `)[0];
     popup_08c210ac825d73d99af366df58af9469.setContent(html_bfd1b6a93303cbea9c13fbcfe71d9ed1);
     marker_60eb3f5f8aec67eda7cabe8ea08bfe11.bindPopup(popup_08c210ac825d73d99af366df58af9469);
     marker_60eb3f5f8aec67eda7cabe8ea08bfe11.bindTooltip(`<div>Atins (boat/4x4 from Barreirinhas)</div>`, {"sticky": true});
@@ -126,13 +145,31 @@
     // Barra Grande (PI)
     var marker_8c31b7c0d9ab9d9c9f189b9f8255c469 = L.marker([-2.923, -41.359], {}).addTo(map_c74bc511c4c1bb524d4b2167dd68b0e3);
     var popup_b98c4bb9199a357d0eae82053b965a22 = L.popup({"maxWidth": 300});
+    var windfinderSrc = "https://www.windfinder.com/widget/forecast/macapa_amapa_brazil?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kts&unit_pressure=hPa&days=4&show_day=1&show_pressure=0&show_waves=0&show_clouds=0&show_rain=0";
     var html_3e97d45954d264974eb3e4a97f7ed79f = $(`<div id="html_3e97d45954d264974eb3e4a97f7ed79f" style="width: 100.0%; height: 100.0%;"><b>Barra Grande (PI)</b>
         <br>
         Barra Grande in the state of Piaui is a somewhat remote, but well-known kite spot. A bit upwind and about 2 km from the beach there is a rocky bank that protects the spot from too big waves. 
         As a result you will have mostly flat water at low tide, but at high tide you must expect choppy conditions.The highlight in Barra Grande is certainly the flat water lagoon 2 km downwind. 
         A gigantic basin fills up with the tide. The subsoil is muddy, but therefore shallow throughout. 
-        If you kite even further downwind, you will come to Macapa and find a perfect playground for freestyling between several sandbanks.
-        </div>`)[0];
+        If you kite even further downwind, you will come to Macapa and find a perfect playground for freestyling between several sandbanks.<br><br>
+
+        <!-- Windfinder widget (iframe) -->
+        <div style="margin-top:8px;">
+        <iframe 
+            title="Windfinder – Macapá forecast"
+            src="${windfinderSrc}"
+            width="300"
+            height="260"
+            frameborder="0"
+            scrolling="no"
+            style="max-width:100%;border:0;border-radius:8px;overflow:hidden;">
+        </iframe>
+        <div style="font-size:12px;opacity:.8;margin-top:4px;">
+            <a rel="nofollow" href="${windfinderSrc.replace('/widget/forecast/','/forecast/')}" target="_blank">Open op Windfinder</a>
+        </div>
+        </div>
+    </div>
+    `)[0];
     popup_b98c4bb9199a357d0eae82053b965a22.setContent(html_3e97d45954d264974eb3e4a97f7ed79f);
     marker_8c31b7c0d9ab9d9c9f189b9f8255c469.bindPopup(popup_b98c4bb9199a357d0eae82053b965a22);
     marker_8c31b7c0d9ab9d9c9f189b9f8255c469.bindTooltip(`<div>Barra Grande (PI)</div>`, {"sticky": true});
@@ -140,8 +177,8 @@
 
     // Macapá (PI)
     var marker_ed2f5d71daef8f5676b26aedec2b6424 = L.marker([-2.910721, -41.445306], {}).addTo(map_c74bc511c4c1bb524d4b2167dd68b0e3);
-    var popup_f466a8183f18aa06711d60904f835bac = L.popup({ maxWidth: 360});
-    var windfinderSrc = "https://www.windfinder.com/widget/forecast/macapa_amapa_brazil?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kts&unit_pressure=hPa&days=7&show_day=1&show_pressure=0&show_waves=0&show_clouds=0&show_rain=0";
+    var popup_f466a8183f18aa06711d60904f835bac = L.popup({ maxWidth: 300});
+    var windfinderSrc = "https://www.windfinder.com/widget/forecast/macapa_amapa_brazil?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kts&unit_pressure=hPa&days=4&show_day=1&show_pressure=0&show_waves=0&show_clouds=0&show_rain=0";
     var html_b50aa7cea02da6b1a9ce0b561dc55072 = $(`
     <div id="html_b50aa7cea02da6b1a9ce0b561dc55072" style="width:100%;height:100%;">
         <b>Macapá (PI)</b><br>
@@ -164,7 +201,7 @@
         <iframe 
             title="Windfinder – Macapá forecast"
             src="${windfinderSrc}"
-            width="360"
+            width="300"
             height="260"
             frameborder="0"
             scrolling="no"
@@ -186,14 +223,32 @@
     // Camocim
     var marker_81deb6654cee5b23bf624bd1aba991da = L.marker([-2.902, -40.843], {}).addTo(map_c74bc511c4c1bb524d4b2167dd68b0e3);
     var popup_1eb69acfb0a37bda1f61da772d491eda = L.popup({"maxWidth": 300});
+    var windfinderSrc = "https://www.windfinder.com/widget/forecast/macapa_amapa_brazil?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kts&unit_pressure=hPa&days=4&show_day=1&show_pressure=0&show_waves=0&show_clouds=0&show_rain=0";
     var html_e02b43e9454a159e7cf832d7038139a1 = $(`<div id="html_e02b43e9454a159e7cf832d7038139a1" style="width: 100.0%; height: 100.0%;"><b>Camocim</b>
         <br>
         Big Air Kitespot. Constant winds over 25 knots with solid waves to jump off or to ride. This place has the strongest wind in all of the Fortaleza, Brazil region.
         The coastline here is huge and wild, backed by stunning sand dunes. The town of Camocim is an authentic working Brazilian small town, but with some interesting old buildings and history. 
         There are really two options when staying in this area. Camocim Town - If you want to really experience the atmosphere and culture you can stay in a stunning old house, 
         that has been beautifully restored, and then be taken 15 minutes by beach buggy to the kite or windsurf beach. 
-        Maceio Beach - You can stay at the beach North of the town (that includes Maceio Beach) so you can kitesurf directly from your accommodation. 
-        </div>`)[0];
+        Maceio Beach - You can stay at the beach North of the town (that includes Maceio Beach) so you can kitesurf directly from your accommodation.<br><br>
+
+        <!-- Windfinder widget (iframe) -->
+        <div style="margin-top:8px;">
+        <iframe 
+            title="Windfinder – Macapá forecast"
+            src="${windfinderSrc}"
+            width="300"
+            height="260"
+            frameborder="0"
+            scrolling="no"
+            style="max-width:100%;border:0;border-radius:8px;overflow:hidden;">
+        </iframe>
+        <div style="font-size:12px;opacity:.8;margin-top:4px;">
+            <a rel="nofollow" href="${windfinderSrc.replace('/widget/forecast/','/forecast/')}" target="_blank">Open op Windfinder</a>
+        </div>
+        </div>
+    </div>
+    `)[0];
     popup_1eb69acfb0a37bda1f61da772d491eda.setContent(html_e02b43e9454a159e7cf832d7038139a1);
     marker_81deb6654cee5b23bf624bd1aba991da.bindPopup(popup_1eb69acfb0a37bda1f61da772d491eda);
     marker_81deb6654cee5b23bf624bd1aba991da.bindTooltip(`<div>Camocim</div>`, {"sticky": true});
@@ -201,6 +256,7 @@
     // Tatajuba
     var marker_6777a35d3995a5fb5159668877aae263 = L.marker([-2.861, -40.728], {}).addTo(map_c74bc511c4c1bb524d4b2167dd68b0e3);
     var popup_0296430d96c706eba332fc9e3057e4d5 = L.popup({"maxWidth": 300});
+    var windfinderSrc = "https://www.windfinder.com/widget/forecast/macapa_amapa_brazil?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kts&unit_pressure=hPa&days=4&show_day=1&show_pressure=0&show_waves=0&show_clouds=0&show_rain=0";
     var html_79b1b8ab928dfb2f03e8d48977146a4e = $(`<div id="html_79b1b8ab928dfb2f03e8d48977146a4e" style="width: 100.0%; height: 100.0%;"><b>Tatajuba</b>
         <br>
         Dune village with flat water and side-onshore waves. The spot offers cross-onshore wind, a standing area for beginners, various spots with mirror flat water for freestylers, a freshwater lagoon, and a wave spot for surf beginners
@@ -208,8 +264,25 @@
         The open sea beyond is also great for beginners thanks to its vastness and the site's safe onshore wind. There is endless space here from the first few metres on the board,
         to cruising further or for practising new moves. Small kicker waves promise great fun on the directional surfboard. Tatajuba offers kiters endless possibilities. If you like,
         you can book a trip to a freshwater lagoon just 4 kilometres away, or discover the coast of Brazil on endless downwinders. 
-        Our beach buggy tours are a must and you can easily get to nearby Jericoacoara for shopping or partying
-        </div>`)[0];
+        Our beach buggy tours are a must and you can easily get to nearby Jericoacoara for shopping or partying<br><br>
+
+        <!-- Windfinder widget (iframe) -->
+        <div style="margin-top:8px;">
+        <iframe 
+            title="Windfinder – Macapá forecast"
+            src="${windfinderSrc}"
+            width="300"
+            height="260"
+            frameborder="0"
+            scrolling="no"
+            style="max-width:100%;border:0;border-radius:8px;overflow:hidden;">
+        </iframe>
+        <div style="font-size:12px;opacity:.8;margin-top:4px;">
+            <a rel="nofollow" href="${windfinderSrc.replace('/widget/forecast/','/forecast/')}" target="_blank">Open op Windfinder</a>
+        </div>
+        </div>
+    </div>
+    `)[0];
     popup_0296430d96c706eba332fc9e3057e4d5.setContent(html_79b1b8ab928dfb2f03e8d48977146a4e);
     marker_6777a35d3995a5fb5159668877aae263.bindPopup(popup_0296430d96c706eba332fc9e3057e4d5);
     marker_6777a35d3995a5fb5159668877aae263.bindTooltip(`<div>Tatajuba</div>`, {"sticky": true});
@@ -217,14 +290,32 @@
     // Jericoacoara
     var marker_3c0d180ed241a7b2457dc058c3fbac7f = L.marker([-2.796, -40.514], {}).addTo(map_c74bc511c4c1bb524d4b2167dd68b0e3);
     var popup_45f1c9c8e384199d26c1085e3ee0093d = L.popup({"maxWidth": 300});
+    var windfinderSrc = "https://www.windfinder.com/widget/forecast/macapa_amapa_brazil?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kts&unit_pressure=hPa&days=4&show_day=1&show_pressure=0&show_waves=0&show_clouds=0&show_rain=0";
     var html_e5f8625aa9db91df703505e3c14f1e9f = $(`<div id="html_e5f8625aa9db91df703505e3c14f1e9f" style="width: 100.0%; height: 100.0%;"><b>Jericoacoara</b>
         <br>
         Known for its strong wind, this spot is made for advanced riders. Jeri is a well-known village in Brazil for its night life, that is in the middle of sand dunes. 
         To go there you’ll have to use a 4×4 or a buggy. Careful, kitesurfing is impossible in Jeri, but you can still do some Wing. Préa is a nice little village where you can find very cheap restaurants if you get out of the main street,
         parallel to the beach.
 
-        190km south from Jeri, you can visit Parque nacional de ubajara, a beautiful place with lagoons and waterfalls and an illuminated cave system in limestone.
-         </div>`)[0];
+        190km south from Jeri, you can visit Parque nacional de ubajara, a beautiful place with lagoons and waterfalls and an illuminated cave system in limestone.<br><br>
+
+        <!-- Windfinder widget (iframe) -->
+        <div style="margin-top:8px;">
+        <iframe 
+            title="Windfinder – Macapá forecast"
+            src="${windfinderSrc}"
+            width="300"
+            height="260"
+            frameborder="0"
+            scrolling="no"
+            style="max-width:100%;border:0;border-radius:8px;overflow:hidden;">
+        </iframe>
+        <div style="font-size:12px;opacity:.8;margin-top:4px;">
+            <a rel="nofollow" href="${windfinderSrc.replace('/widget/forecast/','/forecast/')}" target="_blank">Open op Windfinder</a>
+        </div>
+        </div>
+    </div>
+    `)[0];
     popup_45f1c9c8e384199d26c1085e3ee0093d.setContent(html_e5f8625aa9db91df703505e3c14f1e9f);
     marker_3c0d180ed241a7b2457dc058c3fbac7f.bindPopup(popup_45f1c9c8e384199d26c1085e3ee0093d);
     marker_3c0d180ed241a7b2457dc058c3fbac7f.bindTooltip(`<div>Jericoacoara</div>`, {"sticky": true});
@@ -232,6 +323,7 @@
     // Preá
     var marker_fcfbac4cc02388fcbcd2d271341ea8f3 = L.marker([-2.817, -40.451], {}).addTo(map_c74bc511c4c1bb524d4b2167dd68b0e3);
     var popup_94a75c62e0e166d9366c8239510ead0e = L.popup({"maxWidth": 300});
+    var windfinderSrc = "https://www.windfinder.com/widget/forecast/macapa_amapa_brazil?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kts&unit_pressure=hPa&days=4&show_day=1&show_pressure=0&show_waves=0&show_clouds=0&show_rain=0";
     var html_68a35dc9a10aff1f21ffee8970489fd5 = $(`<div id="html_68a35dc9a10aff1f21ffee8970489fd5" style="width: 100.0%; height: 100.0%;"><b>Preá</b>
         <br>
         Very strong, consistent winds.
@@ -243,6 +335,7 @@
     // Ilha do Guajiru (Itarema)
     var marker_d918cffaab19a54fee64b8e110ea1efd = L.marker([-2.866, -39.901], {}).addTo(map_c74bc511c4c1bb524d4b2167dd68b0e3);
     var popup_b369af3b463732a8dcf5ceabcb1ddfc1 = L.popup({"maxWidth": 300});
+    var windfinderSrc = "https://www.windfinder.com/widget/forecast/macapa_amapa_brazil?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kts&unit_pressure=hPa&days=4&show_day=1&show_pressure=0&show_waves=0&show_clouds=0&show_rain=0";
     var html_b805d24b9a097195bea5e62bbad2e3d6 = $(`<div id="html_b805d24b9a097195bea5e62bbad2e3d6" style="width: 100.0%; height: 100.0%;"><b>Ilha do Guajiru (Itarema)</b>
         <br>
         Ilha do Guajiru is a famous flat-water kitesurfing lagoon in Ceará, about three hours from Fortaleza. A long sandbank creates a huge shallow lagoon with steady side-onshore winds,
@@ -250,8 +343,25 @@
         At low tide, mudflats appear and hidden shells can be a hazard, while at high tide the lagoon fills into a wide, turquoise playground.
         The area is known for its excellent downwinders, including a scenic 7.5-mile run from Almofala through a tidal river to the “Secret Spot.” 
         Infrastructure is modest but kite-focused, with simple accommodations and restaurants catering mainly to riders. The vibe is laid-back and less crowded than Cumbuco, 
-        with reliable wind from July to January, warm water, and beautiful natural surroundings.
-        </div>`)[0];
+        with reliable wind from July to January, warm water, and beautiful natural surroundings.<br><br>
+
+        <!-- Windfinder widget (iframe) -->
+        <div style="margin-top:8px;">
+        <iframe 
+            title="Windfinder – Macapá forecast"
+            src="${windfinderSrc}"
+            width="300"
+            height="260"
+            frameborder="0"
+            scrolling="no"
+            style="max-width:100%;border:0;border-radius:8px;overflow:hidden;">
+        </iframe>
+        <div style="font-size:12px;opacity:.8;margin-top:4px;">
+            <a rel="nofollow" href="${windfinderSrc.replace('/widget/forecast/','/forecast/')}" target="_blank">Open op Windfinder</a>
+        </div>
+        </div>
+    </div>
+    `)[0];
     popup_b369af3b463732a8dcf5ceabcb1ddfc1.setContent(html_b805d24b9a097195bea5e62bbad2e3d6);
     marker_d918cffaab19a54fee64b8e110ea1efd.bindPopup(popup_b369af3b463732a8dcf5ceabcb1ddfc1);
     marker_d918cffaab19a54fee64b8e110ea1efd.bindTooltip(`<div>Ilha do Guajiru (Itarema)</div>`, {"sticky": true});
@@ -259,14 +369,32 @@
     // Icaraí de Amontada (fixed coords)
     var marker_c480678052d6ddddb98d69e6e88e47aa = L.marker([-3.024785, -39.651591], {}).addTo(map_c74bc511c4c1bb524d4b2167dd68b0e3);
     var popup_43dae4837a01a7a455a371272a57cb2a = L.popup({"maxWidth": 300});
+    var windfinderSrc = "https://www.windfinder.com/widget/forecast/macapa_amapa_brazil?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kts&unit_pressure=hPa&days=4&show_day=1&show_pressure=0&show_waves=0&show_clouds=0&show_rain=0";
     var html_34de745c5f950d7a70e459ce00827e3c = $(`<div id="html_34de745c5f950d7a70e459ce00827e3c" style="width: 100.0%; height: 100.0%;"><b>Icaraí de Amontada</b>
         <br>
         Icarai is a small and very lively fishing village, known for its French community. The spot is considered a waves spot. At low tide the spot can be a bit flatter.
         Near Icarai, there’s the ultra flat spot of Patos. (Second Spot in Patos: fresh water lagoon) You’ll have to take a buggy or a boat to go to the spot from Moitas. 
         You can also sail in Caetanos, very small fishing village. Go there for a whole day, it is very likely that you’ll be alone on the spot. 
         And enjoy a tasty grilled fish by the beach in one of the typically Brazilian restaurants. To go to Caetanos you have 2 options, either with a buggy by the beach, 
-        or by the road if you’ve rented a car.
-        </div>`)[0];
+        or by the road if you’ve rented a car.<br><br>
+
+        <!-- Windfinder widget (iframe) -->
+        <div style="margin-top:8px;">
+        <iframe 
+            title="Windfinder – Macapá forecast"
+            src="${windfinderSrc}"
+            width="300"
+            height="260"
+            frameborder="0"
+            scrolling="no"
+            style="max-width:100%;border:0;border-radius:8px;overflow:hidden;">
+        </iframe>
+        <div style="font-size:12px;opacity:.8;margin-top:4px;">
+            <a rel="nofollow" href="${windfinderSrc.replace('/widget/forecast/','/forecast/')}" target="_blank">Open op Windfinder</a>
+        </div>
+        </div>
+    </div>
+    `)[0];
     popup_43dae4837a01a7a455a371272a57cb2a.setContent(html_34de745c5f950d7a70e459ce00827e3c);
     marker_c480678052d6ddddb98d69e6e88e47aa.bindPopup(popup_43dae4837a01a7a455a371272a57cb2a);
     marker_c480678052d6ddddb98d69e6e88e47aa.bindTooltip(`<div>Icaraí de Amontada</div>`, {"sticky": true});
@@ -274,14 +402,32 @@
     // Lagoinha (Trairi)
     var marker_1627bec6c62427d089fda98100c44e9c = L.marker([-3.347093, -39.149213], {}).addTo(map_c74bc511c4c1bb524d4b2167dd68b0e3);
     var popup_64961b58fdf31bead5334bfb028df30c = L.popup({"maxWidth": 300});
+    var windfinderSrc = "https://www.windfinder.com/widget/forecast/macapa_amapa_brazil?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kts&unit_pressure=hPa&days=4&show_day=1&show_pressure=0&show_waves=0&show_clouds=0&show_rain=0";
     var html_bd80c490b0683bc373c7802ae7a10e3a = $(`<div id="html_bd80c490b0683bc373c7802ae7a10e3a" style="width: 100.0%; height: 100.0%;"><b>Lagoinha (Trairi)</b>
         <br>
         Lagoinha is a scenic kite spot in Ceará framed by red dunes, offering both flat-water and wave conditions. The main riding areas are Donkey Kite Lagoon (a shallow, 
         tide-independent lagoon great for beginners and freestylers), Praia de Capim Açú (the best local wave spot with long, gentle waves up to about 2 meters), 
         and the Bay of Lagoinha itself (not ideal—gusty winds and crowded with swimmers). Winds are side-onshore from the right, blowing almost daily from late July to December, 
         with peak strength between September and November. Waves are biggest from October to December. 
-        Tides are moderate; the lagoon is unaffected. Some scattered rocks lie upwind of the bay but are easy to spot and avoid.
-        </div>`)[0];
+        Tides are moderate; the lagoon is unaffected. Some scattered rocks lie upwind of the bay but are easy to spot and avoid.<br><br>
+
+        <!-- Windfinder widget (iframe) -->
+        <div style="margin-top:8px;">
+        <iframe 
+            title="Windfinder – Macapá forecast"
+            src="${windfinderSrc}"
+            width="300"
+            height="260"
+            frameborder="0"
+            scrolling="no"
+            style="max-width:100%;border:0;border-radius:8px;overflow:hidden;">
+        </iframe>
+        <div style="font-size:12px;opacity:.8;margin-top:4px;">
+            <a rel="nofollow" href="${windfinderSrc.replace('/widget/forecast/','/forecast/')}" target="_blank">Open op Windfinder</a>
+        </div>
+        </div>
+    </div>
+    `)[0];
     popup_64961b58fdf31bead5334bfb028df30c.setContent(html_bd80c490b0683bc373c7802ae7a10e3a);
     marker_1627bec6c62427d089fda98100c44e9c.bindPopup(popup_64961b58fdf31bead5334bfb028df30c);
     marker_1627bec6c62427d089fda98100c44e9c.bindTooltip(`<div>Lagoinha (Trairi)</div>`, {"sticky": true});
@@ -289,12 +435,30 @@
     // Guajiru (new)
     var marker_guajiru_2a3a9f = L.marker([-3.237297, -39.236222], {}).addTo(map_c74bc511c4c1bb524d4b2167dd68b0e3);
     var popup_guajiru_2a3a9f = L.popup({"maxWidth": 300});
+    var windfinderSrc = "https://www.windfinder.com/widget/forecast/macapa_amapa_brazil?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kts&unit_pressure=hPa&days=4&show_day=1&show_pressure=0&show_waves=0&show_clouds=0&show_rain=0";
     var html_guajiru_2a3a9f = $(`<div id="html_guajiru_2a3a9f" style="width: 100.0%; height: 100.0%;"><b>Guajiru</b>
         <br>
         Die hard wave spot. Guajiru is primarily cherished by wave-oriented kitesurfers, offering solid conditions suitable for lovers of ocean swells. 
         At high tide, waves can reach approximately 6.5 feet, delivering satisfying rideable waves right at the spot. Unlike some other kite destinations
-        flat-water areas are not immediate. However, with a short boat ride, riders can access nearby lagoons that provide excellent flat-water conditions.
-        </div>`)[0];
+        flat-water areas are not immediate. However, with a short boat ride, riders can access nearby lagoons that provide excellent flat-water conditions.<br><br>
+
+        <!-- Windfinder widget (iframe) -->
+        <div style="margin-top:8px;">
+        <iframe 
+            title="Windfinder – Macapá forecast"
+            src="${windfinderSrc}"
+            width="300"
+            height="260"
+            frameborder="0"
+            scrolling="no"
+            style="max-width:100%;border:0;border-radius:8px;overflow:hidden;">
+        </iframe>
+        <div style="font-size:12px;opacity:.8;margin-top:4px;">
+            <a rel="nofollow" href="${windfinderSrc.replace('/widget/forecast/','/forecast/')}" target="_blank">Open op Windfinder</a>
+        </div>
+        </div>
+    </div>
+    `)[0];
     popup_guajiru_2a3a9f.setContent(html_guajiru_2a3a9f);
     marker_guajiru_2a3a9f.bindPopup(popup_guajiru_2a3a9f);
     marker_guajiru_2a3a9f.bindTooltip(`<div>Guajiru</div>`, {"sticky": true});
@@ -302,13 +466,31 @@
     // Paracuru
     var marker_7700dc255329e441d491a35e84dca307 = L.marker([-3.408192, -39.032148], {}).addTo(map_c74bc511c4c1bb524d4b2167dd68b0e3);
     var popup_4eb4648cabd25cd67d1ba1f861df631b = L.popup({"maxWidth": 300});
+    var windfinderSrc = "https://www.windfinder.com/widget/forecast/macapa_amapa_brazil?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kts&unit_pressure=hPa&days=4&show_day=1&show_pressure=0&show_waves=0&show_clouds=0&show_rain=0";
     var html_135cc8ad3ac23a75c244685071c6f342 = $(`<div id="html_135cc8ad3ac23a75c244685071c6f342" style="width: 100.0%; height: 100.0%;"><b>Paracuru</b>
         <br>
         Overall, Paracuru stands out as one of the few places along the coast where riders can enjoy both high-quality flat-water freestyle conditions and reliable reef waves in the same session, making it a must-visit spot for all levels of kitesurfers. One of the best wave spots in the region. Paracuru is one of the most versatile kitesurfing spots in Ceará, offering both world-class reef waves and flat-water conditions in the same area. 
         The main kite beach, Quebra Mar, lies east of town. About 300 meters offshore, a reef shapes the conditions: at low tide it creates a shallow lagoon with roughly 220 yards of smooth, flat water ideal for beginners and freestylers, while at mid to high tide the reef is covered and produces long, peeling left-hand waves that can reach 2 to 2.5 meters (6 to 8 feet). These waves are powerful but smooth, making them excellent for kite wave-riding and even surfing. The bottom is mostly sandy with a few rocky sections, so it is safer than sharp coral spots, though riders need to pay attention to depth changes with the tide.
         Infrastructure at Quebra Mar is very good, with a beach bar, showers, toilets, shaded parking, kite rental, storage, repair, and even a compressor. Access is via a sandy road, and accommodations are found five to fifteen minutes away in Paracuru town rather than directly at the beach.
-        To the west lies the Rio Curu estuary, which at high tide turns into a vast shallow-water playground that is perfect for flat-water kiting. It is also a common starting point for scenic downwinders to Lagoinha. Many riders also begin or end at Quebra Mar itself because of the combination of flat-water warm-up and wave finale.
-        </div>`)[0];
+        To the west lies the Rio Curu estuary, which at high tide turns into a vast shallow-water playground that is perfect for flat-water kiting. It is also a common starting point for scenic downwinders to Lagoinha. Many riders also begin or end at Quebra Mar itself because of the combination of flat-water warm-up and wave finale.<br><br>
+
+        <!-- Windfinder widget (iframe) -->
+        <div style="margin-top:8px;">
+        <iframe 
+            title="Windfinder – Macapá forecast"
+            src="${windfinderSrc}"
+            width="300"
+            height="260"
+            frameborder="0"
+            scrolling="no"
+            style="max-width:100%;border:0;border-radius:8px;overflow:hidden;">
+        </iframe>
+        <div style="font-size:12px;opacity:.8;margin-top:4px;">
+            <a rel="nofollow" href="${windfinderSrc.replace('/widget/forecast/','/forecast/')}" target="_blank">Open op Windfinder</a>
+        </div>
+        </div>
+    </div>
+    `)[0];
     popup_4eb4648cabd25cd67d1ba1f861df631b.setContent(html_135cc8ad3ac23a75c244685071c6f342);
     marker_7700dc255329e441d491a35e84dca307.bindPopup(popup_4eb4648cabd25cd67d1ba1f861df631b);
     marker_7700dc255329e441d491a35e84dca307.bindTooltip(`<div>Paracuru</div>`, {"sticky": true});
@@ -316,6 +498,7 @@
     // Taíba
     var marker_56811446709a5914a385302c90d69451 = L.marker([-3.494, -38.918], {}).addTo(map_c74bc511c4c1bb524d4b2167dd68b0e3);
     var popup_32faa3b60e872f2736c00107cc59c7b1 = L.popup({"maxWidth": 300});
+    var windfinderSrc = "https://www.windfinder.com/widget/forecast/macapa_amapa_brazil?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kts&unit_pressure=hPa&days=4&show_day=1&show_pressure=0&show_waves=0&show_clouds=0&show_rain=0";
     var html_42dcfdd6ec6a3c1317819053af5d5b53 = $(`<div id="html_42dcfdd6ec6a3c1317819053af5d5b53" style="width: 100.0%; height: 100.0%;"><b>Taíba</b>
         <br>
         Taíba is a versatile kitesurfing spot with both flat-water and wave conditions. Two shallow lagoons provide safe, tide-independent water for beginners and freestylers,
@@ -323,27 +506,64 @@
         blowing steadily from August to November, with larger swells from late October into May.
         The village is quiet and picturesque, about an hour from Fortaleza, with a good mix of pousadas, villas, and restaurants. 
         Popular downwinders include the 14 km ride to Paracuru, with the option to continue further to Lagoinha. Beyond kiting, Taíba offers surfing, dune adventures, and buggy or horseback rides.
-        It’s a relaxed but well-equipped destination that appeals to both freestylers and wave riders.
-        </div>`)[0];
+        It’s a relaxed but well-equipped destination that appeals to both freestylers and wave riders.<br><br>
+
+        <!-- Windfinder widget (iframe) -->
+        <div style="margin-top:8px;">
+        <iframe 
+            title="Windfinder – Macapá forecast"
+            src="${windfinderSrc}"
+            width="300"
+            height="260"
+            frameborder="0"
+            scrolling="no"
+            style="max-width:100%;border:0;border-radius:8px;overflow:hidden;">
+        </iframe>
+        <div style="font-size:12px;opacity:.8;margin-top:4px;">
+            <a rel="nofollow" href="${windfinderSrc.replace('/widget/forecast/','/forecast/')}" target="_blank">Open op Windfinder</a>
+        </div>
+        </div>
+    </div>
+    `)[0];
     popup_32faa3b60e872f2736c00107cc59c7b1.setContent(html_42dcfdd6ec6a3c1317819053af5d5b53);
     marker_56811446709a5914a385302c90d69451.bindPopup(popup_32faa3b60e872f2736c00107cc59c7b1);
     marker_56811446709a5914a385302c90d69451.bindTooltip(`<div>Taíba</div>`, {"sticky": true});
 
     // Cumbuco
     var marker_e01954e2addecf7eb3c55851d38c7b6e = L.marker([-3.628, -38.722], {}).addTo(map_c74bc511c4c1bb524d4b2167dd68b0e3);
-    var popup_23f381c0c3aef8800339d04ad85bd073 = L.popup({"maxWidth": 300});
+    var popup_23f381c0c3aef8800339d04ad85bd073 = L.popup({maxWidth: 320,  className: "scrollable-popup"});
+    var windfinderSrc = "https://www.windfinder.com/widget/forecast/cumbuco_beach?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kts&unit_pressure=hPa&days=4&show_day=1&show_pressure=0&show_clouds=0&show_rain=0";
     var html_37f2187616b7fc935579dbee7d79d3b0 = $(`<div id="html_37f2187616b7fc935579dbee7d79d3b0" style="width: 100.0%; height: 100.0%;"><b>Cumbuco</b>
         <br>
         Cumbuco is one of Brazil’s most historic and iconic kitesurfing destinations, located about 30 minutes from Fortaleza International Airport. Originally a fishing village, it has grown into a lively tourist hub with plenty of kite schools, restaurants, and accommodations ranging from basic to upper-middle class. Its popularity and proximity to Fortaleza make it very accessible but also bring downsides such as higher prices, plastic pollution, and a relatively elevated crime rate compared to more remote kite spots.
         The main kitesurfing area is Cumbuco Beach, a long stretch with reliable side-onshore wind. Conditions change with the tide: low tide brings flatter water, while high tide creates chop and occasional shore breaks. Just west of the village lies Pico das Almas, a wave spot with swells around 5 feet that grow larger during new and full moons. About 7 kilometers downwind is Cauipe Lagoon, a flat-water paradise that attracts beginners, advanced riders, and even professionals, though it can get very crowded during the day. Tabuba Lagoon, located upwind of Cumbuco, offers an alternative flat-water option that is smaller and less crowded but has rocks and shells near the shore.
         Tides play a big role on the sea side, while the lagoons are freshwater and not tide-dependent. Cumbuco is also a starting point for downwind trips, whether shorter runs to Cauipe or Pico das Almas or longer adventures north to Pecem. Beyond kiting, visitors can try traditional jangada sailing, dune buggy and quad tours, sandboarding, zip-lining, and watersports in nearby Lagoa Banana.
-        Overall, Cumbuco combines the convenience of being close to Fortaleza with a wide variety of conditions—waves, flat water, and reliable wind. It remains a hub for both recreational kiters and professionals, though riders should be prepared for crowding, higher costs, and environmental pressures.
-        </div>`)[0];
+        Overall, Cumbuco combines the convenience of being close to Fortaleza with a wide variety of conditions—waves, flat water, and reliable wind. It remains a hub for both recreational kiters and professionals, though riders should be prepared for crowding, higher costs, and environmental pressures.<br><br>
+
+        <!-- Windfinder widget (iframe) -->
+        <div style="margin-top:8px;">
+        <iframe 
+            title="Windfinder – Cumbuco forecast"
+            src="${windfinderSrc}"
+            width="300"
+            height="260"
+            frameborder="0"
+            scrolling="no"
+            style="max-width:100%;border:0;border-radius:8px;overflow:hidden;">
+        </iframe>
+        <div style="font-size:12px;opacity:.8;margin-top:4px;">
+            <a rel="nofollow" href="${windfinderSrc.replace('/widget/forecast/','/forecast/')}" target="_blank">
+            Open on Windfinder
+            </a>
+        </div>
+        </div>
+    </div>
+    `)[0];
+
     popup_23f381c0c3aef8800339d04ad85bd073.setContent(html_37f2187616b7fc935579dbee7d79d3b0);
     marker_e01954e2addecf7eb3c55851d38c7b6e.bindPopup(popup_23f381c0c3aef8800339d04ad85bd073);
-    marker_e01954e2addecf7eb3c55851d38c7b6e.bindTooltip(`<div>Cumbuco</div>`, {"sticky": true});
-
-    // Fortaleza
+    marker_e01954e2addecf7eb3c55851d38c7b6e.bindTooltip(`<div>Cumbuco</div>`, { sticky: true });
+        // Fortaleza
     var marker_2d0c29d4d24e76eb5b9f6dc788fa9f40 = L.marker([-3.73, -38.525], {}).addTo(map_c74bc511c4c1bb524d4b2167dd68b0e3);
     var popup_90e44cae80ba8f253232682b19d4342a = L.popup({"maxWidth": 300});
     var html_e3bb321fe8cc814d90d1bb18189606cb = $(`<div id="html_e3bb321fe8cc814d90d1bb18189606cb" style="width: 100.0%; height: 100.0%;"><b>Fortaleza</b>
