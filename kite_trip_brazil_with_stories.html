@@ -55,6 +55,31 @@ Here you go—full, simplified HTML with the **Route Overview** panel and **all 
         {"attribution": "Data by &copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a>, under <a href=\"http://www.openstreetmap.org/copyright\">ODbL</a>.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
     ).addTo(map_c74bc511c4c1bb524d4b2167dd68b0e3);
 
+    // --- Salvador (Bahia) ---
+    var marker_salvador_ba_01 = L.marker([-12.97775, -38.50163],{}).addTo(map_c74bc511c4c1bb524d4b2167dd68b0e3);
+    var popup_salvador_ba_01 = L.popup({"maxWidth": 300});
+    var html_salvador_ba_01 = $(`<div id="html_salvador_ba_01" style="width:100%;height:100%;">
+    <b>Salvador (Bahia)</b><br>
+    Afro-Brazilian heart and former colonial capital, where baroque churches, pastel façades, and capoeira rhythms spill across the Pelourinho. 
+    Strong culture, spicy Bahian food (acarajé!), and lively seaside beaches make it a vibrant start or finish to a Brazil kite/road trip.
+    </div>`)[0];
+    popup_salvador_ba_01.setContent(html_salvador_ba_01);
+    marker_salvador_ba_01.bindPopup(popup_salvador_ba_01);
+    marker_salvador_ba_01.bindTooltip(`<div>Salvador (Bahia)</div>`, {"sticky": true});
+
+    // --- Chapada Diamantina (Bahia) ---
+    var marker_chapada_ba_01 = L.marker([-12.56111, -41.38972],{}).addTo(map_c74bc511c4c1bb524d4b2167dd68b0e3);
+    var popup_chapada_ba_01 = L.popup({"maxWidth": 300});
+    var html_chapada_ba_01 = $(`<div id="html_chapada_ba_01" style="width:100%;height:100%;">
+    <b>Chapada Diamantina (Bahia)</b>
+    <br>
+    Table-top mountains, blue caves, and epic waterfalls like Fumaça make this Brazil’s trekker paradise. Base in Lençóis for day hikes or the 
+    multi-day Vale do Pati. Best outside the heavy rains; expect crystal pools (Poço Azul/Encantado) and big views after short, steep climbs.
+    </div>`)[0];
+    popup_chapada_ba_01.setContent(html_chapada_ba_01);
+    marker_chapada_ba_01.bindPopup(popup_chapada_ba_01);
+    marker_chapada_ba_01.bindTooltip(`<div>Chapada Diamantina (Bahia)</div>`, {"sticky": true});
+
     // São Luís
     var marker_13183185a35648ce9f4e56de8aa857b1 = L.marker([-2.53, -44.302], {}).addTo(map_c74bc511c4c1bb524d4b2167dd68b0e3);
     var popup_b2dfc8939669e6a17831c27116998d7f = L.popup({"maxWidth": 300});
