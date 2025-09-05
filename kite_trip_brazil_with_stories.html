@@ -1,6 +1,4 @@
-Here you go—full, simplified HTML with the **Route Overview** panel and **all route polylines removed**, plus **Guajiru added** and **Icaraí de Amontada** coordinates fixed. I also patched a tiny typo in the Preá popup (`<b>Preá</b>` was missing a `>`).
 
-```html
 <!DOCTYPE html>
 <html>
 <head>
@@ -139,21 +137,51 @@ Here you go—full, simplified HTML with the **Route Overview** panel and **all 
     marker_8c31b7c0d9ab9d9c9f189b9f8255c469.bindPopup(popup_b98c4bb9199a357d0eae82053b965a22);
     marker_8c31b7c0d9ab9d9c9f189b9f8255c469.bindTooltip(`<div>Barra Grande (PI)</div>`, {"sticky": true});
 
+
     // Macapá (PI)
-    var marker_ed2f5d71daef8f5676b26aedec2b6424 = L.marker([-2.85, -41.3], {}).addTo(map_c74bc511c4c1bb524d4b2167dd68b0e3);
-    var popup_f466a8183f18aa06711d60904f835bac = L.popup({"maxWidth": 300});
-    var html_b50aa7cea02da6b1a9ce0b561dc55072 = $(`<div id="html_b50aa7cea02da6b1a9ce0b561dc55072" style="width: 100.0%; height: 100.0%;"><b>Macapá (PI)</b>
-        <br>
-        Wide Macapa beach is located in the very small village of Ponta do Anel, still little known. This spot can offer all the conditions: waves and flat. 
-        Whwen there's no wind, you can go for a day in the Delta de Parnaiba or Rio Parnaiba. It's an unique ecosystem in the world, including labyrinthine mangroves. 
-        From Sao Luis it takes a good seven hours and the route is slightly long. In Macapa the tides have a very big influence on the spot characteristics. 
-        Macapa is first and foremost a brilliant flat water spot. But at high tide there are some places with a pretty decent wave. However, Macapa cannot be called a wave spot therefore. 
-        The tidal range reaches an impressive 2,4 meters at full or new moon. At low tide you can walk hundreds of meters over sandbanks and the sea beyond is smooth as glass.
-        As the tide rises, new playgrounds are constantly being created. At the peak of the tide, waves reach a height of over 1,5 meters in some places.
-         </div>`)[0];
+    var marker_ed2f5d71daef8f5676b26aedec2b6424 = L.marker([-2.910721, -41.445306], {}).addTo(map_c74bc511c4c1bb524d4b2167dd68b0e3);
+    var popup_f466a8183f18aa06711d60904f835bac = L.popup({ maxWidth: 500 });
+    var windfinderSrc = "https://www.windfinder.com/widget/forecast/macapa_amapa_brazil?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kts&unit_pressure=hPa&days=3&show_day=1&show_waves=1";
+    var html_b50aa7cea02da6b1a9ce0b561dc55072 = $(`
+    <div id="html_b50aa7cea02da6b1a9ce0b561dc55072" style="width:100%;height:100%;">
+        <b>Macapá (PI)</b><br>
+        Wide Macapá beach is located in the very small village of Ponta do Anel, still little known. 
+        This spot can offer all the conditions: waves and flat.<br><br>
+        When there's no wind, you can go for a day in the Delta de Parnaíba or Rio Parnaíba.
+        It's a unique ecosystem in the world, including labyrinthine mangroves.<br><br>
+        From São Luís it takes a good seven hours and the route is slightly long.
+        In Macapá the tides have a very big influence on the spot characteristics.<br><br>
+        Macapá is first and foremost a brilliant flat water spot.
+        But at high tide there are some places with a pretty decent wave.
+        However, Macapá cannot be called a wave spot therefore.<br><br>
+        The tidal range reaches an impressive 2.4 meters at full or new moon.
+        At low tide you can walk hundreds of meters over sandbanks and the sea beyond is smooth as glass.<br><br>
+        As the tide rises, new playgrounds are constantly being created.
+        At the peak of the tide, waves reach a height of over 1.5 meters in some places.<br><br>
+
+        <!-- Windfinder widget (iframe) -->
+        <div style="margin-top:8px;">
+        <iframe 
+            title="Windfinder – Macapá forecast"
+            src="${windfinderSrc}"
+            width="500"
+            height="260"
+            frameborder="0"
+            scrolling="no"
+            style="max-width:100%;border:0;border-radius:8px;overflow:hidden;">
+        </iframe>
+        <div style="font-size:12px;opacity:.8;margin-top:4px;">
+            <a rel="nofollow" href="${windfinderSrc.replace('/widget/forecast/','/forecast/')}" target="_blank">Open op Windfinder</a>
+        </div>
+        </div>
+    </div>
+    `)[0];
+
     popup_f466a8183f18aa06711d60904f835bac.setContent(html_b50aa7cea02da6b1a9ce0b561dc55072);
     marker_ed2f5d71daef8f5676b26aedec2b6424.bindPopup(popup_f466a8183f18aa06711d60904f835bac);
-    marker_ed2f5d71daef8f5676b26aedec2b6424.bindTooltip(`<div>Macapá (PI)</div>`, {"sticky": true});
+    marker_ed2f5d71daef8f5676b26aedec2b6424.bindTooltip(`<div>Macapá (PI)</div>`, { sticky: true });
+
+
 
     // Camocim
     var marker_81deb6654cee5b23bf624bd1aba991da = L.marker([-2.902, -40.843], {}).addTo(map_c74bc511c4c1bb524d4b2167dd68b0e3);
