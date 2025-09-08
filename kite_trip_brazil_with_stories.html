@@ -461,8 +461,8 @@
     var marker_1627bec6c62427d089fda98100c44e9c = L.marker([-3.347093, -39.149213], {}).addTo(map_c74bc511c4c1bb524d4b2167dd68b0e3);
     var popup_64961b58fdf31bead5334bfb028df30c = L.popup({"maxWidth": 300});
     var windfinderSrc = "https://www.windfinder.com/widget/forecast/lagoinha?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kts&unit_pressure=hPa&days=4&show_day=1&show_pressure=0&show_clouds=0&show_rain=0";
-    var surfForecastSrc = "https://www.surf-forecast.com/breaks/lagoinha/forecasts/widget/m";
-    var surfForecastLink = "https://www.surf-forecast.com/breaks/lagoinha";
+    var surfForecastSrc = "https://www.surf-forecast.com/breaks/Praiado-Pecem/forecasts/widget/m";
+    var surfForecastLink = "https://www.surf-forecast.com/breaks/Praiado-Pecem";
     var html_bd80c490b0683bc373c7802ae7a10e3a = $(`<div id="html_bd80c490b0683bc373c7802ae7a10e3a" style="width: 100.0%; height: 100.0%;"><b>Lagoinha (Trairi)</b>
         <br>
         Lagoinha is a scenic kite spot in Ceará framed by red dunes, offering both flat-water and wave conditions. The main riding areas are Donkey Kite Lagoon (a shallow, 
@@ -573,6 +573,8 @@
     var marker_56811446709a5914a385302c90d69451 = L.marker([-3.494, -38.918], {}).addTo(map_c74bc511c4c1bb524d4b2167dd68b0e3);
     var popup_32faa3b60e872f2736c00107cc59c7b1 = L.popup({"maxWidth": 300});
     var windfinderSrc = "https://www.windfinder.com/widget/forecast/lagoa_de_taiba?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kts&unit_pressure=hPa&days=4&show_day=1&show_pressure=0&show_clouds=0&show_rain=0";
+    var surfForecastSrc = "https://www.surf-forecast.com/breaks/Tabinha/forecasts/widget/m";
+    var surfForecastLink = "https://www.surf-forecast.com/breaks/Tabinha";
     var html_42dcfdd6ec6a3c1317819053af5d5b53 = $(`<div id="html_42dcfdd6ec6a3c1317819053af5d5b53" style="width: 100.0%; height: 100.0%;"><b>Taíba</b>
         <br>
         Taíba is a versatile kitesurfing spot with both flat-water and wave conditions. Two shallow lagoons provide safe, tide-independent water for beginners and freestylers,
@@ -582,19 +584,33 @@
         Popular downwinders include the 14 km ride to Paracuru, with the option to continue further to Lagoinha. Beyond kiting, Taíba offers surfing, dune adventures, and buggy or horseback rides.
         It’s a relaxed but well-equipped destination that appeals to both freestylers and wave riders.<br><br>
 
-        <!-- Windfinder widget (iframe) -->
+            <!-- Windfinder widget -->
         <div style="margin-top:8px;">
         <iframe 
             title="Windfinder forecast"
             src="${windfinderSrc}"
-            width="600"
-            height="400"
-            frameborder="0"
-            scrolling="no"
+            width="600" height="400" frameborder="0" scrolling="no"
             style="max-width:100%;border:0;border-radius:8px;overflow:hidden;">
         </iframe>
         <div style="font-size:12px;opacity:.8;margin-top:4px;">
-            <a rel="nofollow" href="${windfinderSrc.replace('/widget/forecast/','/forecast/')}" target="_blank">Open op Windfinder</a>
+            <a rel="nofollow" target="_blank" href="${windfinderSrc.replace('/widget/forecast/','/forecast/')}">
+            Open op Windfinder
+            </a>
+        </div>
+        </div>
+
+        <!-- Surf-Forecast widget -->
+        <div style="margin-top:12px;">
+        <iframe
+            title="Surf-Forecast"
+            src="${surfForecastSrc}"
+            width="600" height="400" frameborder="0" scrolling="no"
+            style="max-width:100%;border:0;border-radius:8px;overflow:hidden;">
+        </iframe>
+        <div style="font-size:12px;opacity:.8;margin-top:4px;">
+            <a rel="nofollow" target="_blank" href="${surfForecastLink}">
+            Meer details op Surf-Forecast
+            </a>
         </div>
         </div>
     </div>
