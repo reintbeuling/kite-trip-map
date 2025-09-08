@@ -37,6 +37,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+  <link rel="stylesheet" href="https://www.surf-forecast.com/stylesheets/widget.css" />
+
 
   <!-- Mobile scaling -->
   <meta name="viewport"
@@ -163,7 +165,7 @@
         <!-- Windfinder widget (iframe) -->
         <div style="margin-top:8px;">
         <iframe 
-            title="Windfinder – Macapá forecast"
+            title="Windfinder forecast"
             src="${windfinderSrc}"
             width="600"
             height="400"
@@ -195,7 +197,7 @@
         <!-- Windfinder widget (iframe) -->
         <div style="margin-top:8px;">
         <iframe 
-            title="Windfinder – Macapá forecast"
+            title="Windfinder forecast"
             src="${windfinderSrc}"
             width="600"
             height="400"
@@ -238,7 +240,7 @@
         <!-- Windfinder widget (iframe) -->
         <div style="margin-top:8px;">
         <iframe 
-            title="Windfinder – Macapá forecast"
+            title="Windfinder forecast"
             src="${windfinderSrc}"
             width="600"
             height="400"
@@ -274,7 +276,7 @@
         <!-- Windfinder widget (iframe) -->
         <div style="margin-top:8px;">
         <iframe 
-            title="Windfinder – Macapá forecast"
+            title="Windfinder forecast"
             src="${windfinderSrc}"
             width="600"
             height="400"
@@ -305,7 +307,7 @@
         <!-- Windfinder widget (iframe) -->
         <div style="margin-top:8px;">
         <iframe
-            title="Windfinder – Tatajuba forecast"
+            title="Windfinder forecast"
             src="${windfinderSrc}"
             width="600"
             height="500"
@@ -342,7 +344,7 @@
         <!-- Windfinder widget (iframe) -->
         <div style="margin-top:8px;">
         <iframe 
-            title="Windfinder – Macapá forecast"
+            title="Windfinder forecast"
             src="${windfinderSrc}"
             width="600"
             height="400"
@@ -388,7 +390,7 @@
         <!-- Windfinder widget (iframe) -->
         <div style="margin-top:8px;">
         <iframe 
-            title="Windfinder – Macapá forecast"
+            title="Windfinder forecast"
             src="${windfinderSrc}"
             width="600"
             height="400"
@@ -410,6 +412,8 @@
     var marker_c480678052d6ddddb98d69e6e88e47aa = L.marker([-3.024785, -39.651591], {}).addTo(map_c74bc511c4c1bb524d4b2167dd68b0e3);
     var popup_43dae4837a01a7a455a371272a57cb2a = L.popup({"maxWidth": 300});
     var windfinderSrc = "https://www.windfinder.com/widget/forecast/icarai?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kts&unit_pressure=hPa&days=4&show_day=1&show_pressure=0&show_clouds=0&show_rain=0";
+    var surfForecastSrc = "https://www.surf-forecast.com/breaks/Icarai/forecasts/widget/m";
+    var surfForecastLink = "https://www.surf-forecast.com/breaks/Icarai";
     var html_34de745c5f950d7a70e459ce00827e3c = $(`<div id="html_34de745c5f950d7a70e459ce00827e3c" style="width: 100.0%; height: 100.0%;"><b>Icaraí de Amontada</b>
         <br>
         Icarai is a small and very lively fishing village, known for its French community. The spot is considered a waves spot. At low tide the spot can be a bit flatter.
@@ -418,19 +422,33 @@
         And enjoy a tasty grilled fish by the beach in one of the typically Brazilian restaurants. To go to Caetanos you have 2 options, either with a buggy by the beach, 
         or by the road if you’ve rented a car.<br><br>
 
-        <!-- Windfinder widget (iframe) -->
+            <!-- Windfinder widget -->
         <div style="margin-top:8px;">
         <iframe 
-            title="Windfinder – Macapá forecast"
+            title="Windfinder forecast"
             src="${windfinderSrc}"
-            width="600"
-            height="400"
-            frameborder="0"
-            scrolling="no"
+            width="600" height="400" frameborder="0" scrolling="no"
             style="max-width:100%;border:0;border-radius:8px;overflow:hidden;">
         </iframe>
         <div style="font-size:12px;opacity:.8;margin-top:4px;">
-            <a rel="nofollow" href="${windfinderSrc.replace('/widget/forecast/','/forecast/')}" target="_blank">Open op Windfinder</a>
+            <a rel="nofollow" target="_blank" href="${windfinderSrc.replace('/widget/forecast/','/forecast/')}">
+            Open op Windfinder
+            </a>
+        </div>
+        </div>
+
+        <!-- Surf-Forecast widget -->
+        <div style="margin-top:12px;">
+        <iframe
+            title="Surf-Forecast"
+            src="${surfForecastSrc}"
+            width="600" height="400" frameborder="0" scrolling="no"
+            style="max-width:100%;border:0;border-radius:8px;overflow:hidden;">
+        </iframe>
+        <div style="font-size:12px;opacity:.8;margin-top:4px;">
+            <a rel="nofollow" target="_blank" href="${surfForecastLink}">
+            Meer details op Surf-Forecast
+            </a>
         </div>
         </div>
     </div>
@@ -443,6 +461,8 @@
     var marker_1627bec6c62427d089fda98100c44e9c = L.marker([-3.347093, -39.149213], {}).addTo(map_c74bc511c4c1bb524d4b2167dd68b0e3);
     var popup_64961b58fdf31bead5334bfb028df30c = L.popup({"maxWidth": 300});
     var windfinderSrc = "https://www.windfinder.com/widget/forecast/lagoinha?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kts&unit_pressure=hPa&days=4&show_day=1&show_pressure=0&show_clouds=0&show_rain=0";
+    var surfForecastSrc = "https://www.surf-forecast.com/breaks/lagoinha/forecasts/widget/m";
+    var surfForecastLink = "https://www.surf-forecast.com/breaks/lagoinha";
     var html_bd80c490b0683bc373c7802ae7a10e3a = $(`<div id="html_bd80c490b0683bc373c7802ae7a10e3a" style="width: 100.0%; height: 100.0%;"><b>Lagoinha (Trairi)</b>
         <br>
         Lagoinha is a scenic kite spot in Ceará framed by red dunes, offering both flat-water and wave conditions. The main riding areas are Donkey Kite Lagoon (a shallow, 
@@ -451,19 +471,33 @@
         with peak strength between September and November. Waves are biggest from October to December. 
         Tides are moderate; the lagoon is unaffected. Some scattered rocks lie upwind of the bay but are easy to spot and avoid.<br><br>
 
-        <!-- Windfinder widget (iframe) -->
+            <!-- Windfinder widget -->
         <div style="margin-top:8px;">
         <iframe 
-            title="Windfinder – Macapá forecast"
+            title="Windfinder forecast"
             src="${windfinderSrc}"
-            width="600"
-            height="400"
-            frameborder="0"
-            scrolling="no"
+            width="600" height="400" frameborder="0" scrolling="no"
             style="max-width:100%;border:0;border-radius:8px;overflow:hidden;">
         </iframe>
         <div style="font-size:12px;opacity:.8;margin-top:4px;">
-            <a rel="nofollow" href="${windfinderSrc.replace('/widget/forecast/','/forecast/')}" target="_blank">Open op Windfinder</a>
+            <a rel="nofollow" target="_blank" href="${windfinderSrc.replace('/widget/forecast/','/forecast/')}">
+            Open op Windfinder
+            </a>
+        </div>
+        </div>
+
+        <!-- Surf-Forecast widget -->
+        <div style="margin-top:12px;">
+        <iframe
+            title="Surf-Forecast"
+            src="${surfForecastSrc}"
+            width="600" height="400" frameborder="0" scrolling="no"
+            style="max-width:100%;border:0;border-radius:8px;overflow:hidden;">
+        </iframe>
+        <div style="font-size:12px;opacity:.8;margin-top:4px;">
+            <a rel="nofollow" target="_blank" href="${surfForecastLink}">
+            Meer details op Surf-Forecast
+            </a>
         </div>
         </div>
     </div>
@@ -485,7 +519,7 @@
         <!-- Windfinder widget (iframe) -->
         <div style="margin-top:8px;">
         <iframe 
-            title="Windfinder – Macapá forecast"
+            title="Windfinder forecast"
             src="${windfinderSrc}"
             width="600"
             height="400"
@@ -517,7 +551,7 @@
         <!-- Windfinder widget (iframe) -->
         <div style="margin-top:8px;">
         <iframe 
-            title="Windfinder – Macapá forecast"
+            title="Windfinder forecast"
             src="${windfinderSrc}"
             width="600"
             height="400"
@@ -551,7 +585,7 @@
         <!-- Windfinder widget (iframe) -->
         <div style="margin-top:8px;">
         <iframe 
-            title="Windfinder – Macapá forecast"
+            title="Windfinder forecast"
             src="${windfinderSrc}"
             width="600"
             height="400"
@@ -583,7 +617,7 @@
         <!-- Windfinder widget (iframe) -->
         <div style="margin-top:8px;">
         <iframe 
-            title="Windfinder – Cumbuco forecast"
+            title="Windfinder forecast"
             src="${windfinderSrc}"
             width="600"
             height="400"
