@@ -90,6 +90,13 @@
         }
     );
 
+    var surfIcon = L.icon({
+    iconUrl: "C:\Users\ReintBeulingFincoEne\price-data-analysis\kite-trip-map\surf.png",          // path to your image
+    iconSize:     [32, 32],       // size of the icon [width, height]
+    iconAnchor:   [16, 32],       // point of the icon which corresponds to marker’s location
+    popupAnchor:  [0, -32]        // point from which the popup should open relative to the iconAnchor
+    });
+
     var tile_layer_a6b5a697d70cd952d8a2120143e89c69 = L.tileLayer(
         "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
         {"attribution": "Data by &copy; <a href=\"http://openstreetmap.org\">OpenStreetMap</a>, under <a href=\"http://www.openstreetmap.org/copyright\">ODbL</a>.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
@@ -148,7 +155,7 @@
     marker_6a383d54a8be4aca93d67de41ec7a428.bindTooltip(`<div>Barreirinhas</div>`, {"sticky": true});
 
     // Atins
-    var marker_60eb3f5f8aec67eda7cabe8ea08bfe11 = L.marker([-2.574, -42.746], {}).addTo(map_c74bc511c4c1bb524d4b2167dd68b0e3);
+    var marker_60eb3f5f8aec67eda7cabe8ea08bfe11 = L.marker([-2.574, -42.746], {icon: surfIcon}).addTo(map_c74bc511c4c1bb524d4b2167dd68b0e3);
     var popup_08c210ac825d73d99af366df58af9469 = L.popup({"maxWidth": 300});
     var windfinderSrc = "https://www.windfinder.com/widget/forecast/barreirinhas_maranhao_brazil?unit_wave=m&unit_rain=mm&unit_temperature=c&unit_wind=kts&unit_pressure=hPa&days=4&show_day=1&show_pressure=0&show_waves=0&show_clouds=0&show_rain=0";
     var html_bfd1b6a93303cbea9c13fbcfe71d9ed1 = $(`<div id="html_bfd1b6a93303cbea9c13fbcfe71d9ed1" style="width: 100.0%; height: 100.0%;"><b>Atins (by boat or 4x4 from Barreirinhas)</b>
